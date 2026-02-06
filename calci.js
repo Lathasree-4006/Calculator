@@ -94,3 +94,8 @@ function recipro(){
     }
     display.value = reciprocal(n);
 }
+
+function percent(){
+    let n = Number(display.value);
+    display.value = n/100;
+}
