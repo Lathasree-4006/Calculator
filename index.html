@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calci.css">
+</head>
+<body>
+    <div class="rectangle-box">
+          <input type="text" id="display">
+    
+    <div class="container">
+        <div class="rectangle-box1">
+          <button   class="math" onclick="toDisplay('+')">+</button>
+            <button    class="math" onclick="toDisplay('-')">-</button>
+            <button    class="math" onclick="toDisplay('*')">*</button>
+            <button    class="math" onclick="toDisplay('/')">/</button>
+            <button   class="math" onclick="toDisplay('%')">%</button>
+            <button   class="math" onclick="recipro()">1/x</button>
+            <button   class="math" onclick="toSqrt()">Sqrt</button>
+            <button   class="math" onclick="fact()">n!</button>
+            <button   class="math" onclick="toSquare()">x<sup>2</sup></button>
+            <button   class="math" onclick="toCube()">x<sup>3</sup></button>
+            <button   class="math" onclick="log10()">log<sub>10</sub>x</button>
+            <button   class="math" onclick="ln('ln')">ln</button>
+            <button   class="math" onclick="sin()" class = "trigo">sin</button>
+            <button  class="math" onclick="cos()"  class = "trigo">cos</button>
+            <button  class="math" onclick="tan()"  class = "trigo">tan</button>
+        </div>
+        <div class="rectangle-box1">
+          <button  onclick="toDisplay('1')">1</button>
+            <button   onclick="toDisplay('2')">2</button>
+            <button  onclick="toDisplay('3')">3</button>
+            <button   onclick="toDisplay('4')">4</button>
+            <button   class="math" onclick="calculate()">=</button>
+            <button  onclick="toDisplay('5')">5</button>
+            <button   onclick="toDisplay('6')">6</button>
+            <button   onclick="toDisplay('7')">7</button>
+            <button   onclick="toDisplay('8')">8</button>
+            <button  class="math" onclick="clearDisplay()">C</button>
+            <button   onclick="toDisplay('9')">9</button>
+            <button onclick="toDisplay('0')">0</button>
+            <button class="math" onclick = "toDisplay('.')">.</button>
+            <button   class="math" onclick="log2()">log<sub>2</sub>x</button>
+        </div>
+       </div> 
+    </div>
+    <script src="calci.js"></script>
+</body>
+</html>
