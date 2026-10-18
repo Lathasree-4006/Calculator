@@ -3,49 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10131a">
     <title>Calculator</title>
     <link rel="stylesheet" href="calci.css">
 </head>
 <body>
-    <div class="rectangle-box">
-          <input type="text" id="display">
-    
-    <div class="container">
-        <div class="rectangle-box1">
-          <button   class="math" onclick="toDisplay('+')">+</button>
-            <button    class="math" onclick="toDisplay('-')">-</button>
-            <button    class="math" onclick="toDisplay('*')">*</button>
-            <button    class="math" onclick="toDisplay('/')">/</button>
-            <button   class="math" onclick="percent()">%</button>
-            <button   class="math" onclick="recipro()">1/x</button>
-            <button   class="math" onclick="toSqrt()">Sqrt</button>
-            <button   class="math" onclick="fact()">n!</button>
-            <button   class="math" onclick="toSquare()">x<sup>2</sup></button>
-            <button   class="math" onclick="toCube()">x<sup>3</sup></button>
-            <button   class="math" onclick="log10()">log<sub>10</sub>x</button>
-            <button   class="math" onclick="ln('ln')">ln</button>
-            <button   class="math" onclick="sin()" class = "trigo">sin</button>
-            <button  class="math" onclick="cos()"  class = "trigo">cos</button>
-            <button  class="math" onclick="tan()"  class = "trigo">tan</button>
+    <main class="calculator" aria-label="Scientific calculator">
+        <header class="calculator-header">
+            <div>
+                <p class="eyebrow">Everyday math, made simple</p>
+                <h1>Calculator</h1>
+            </div>
+            <span class="keyboard-hint">Keyboard ready</span>
+        </header>
+
+        <label class="sr-only" for="display">Calculator display</label>
+        <input type="text" id="display" inputmode="decimal" autocomplete="off"
+               spellcheck="false" placeholder="0" aria-live="polite">
+
+        <div class="keypad" aria-label="Calculator keys">
+            <button type="button" class="utility" data-action="clear" aria-label="Clear">AC</button>
+            <button type="button" class="utility" data-action="backspace" aria-label="Delete last character">⌫</button>
+            <button type="button" class="utility" data-action="percent" aria-label="Percent">%</button>
+            <button type="button" class="operator" data-value="/">÷</button>
+            <button type="button" class="scientific" data-action="reciprocal">1/x</button>
+
+            <button type="button" data-value="7">7</button>
+            <button type="button" data-value="8">8</button>
+            <button type="button" data-value="9">9</button>
+            <button type="button" class="operator" data-value="*">×</button>
+            <button type="button" class="scientific" data-action="sqrt">√x</button>
+
+            <button type="button" data-value="4">4</button>
+            <button type="button" data-value="5">5</button>
+            <button type="button" data-value="6">6</button>
+            <button type="button" class="operator" data-value="-">−</button>
+            <button type="button" class="scientific" data-action="square">x²</button>
+
+            <button type="button" data-value="1">1</button>
+            <button type="button" data-value="2">2</button>
+            <button type="button" data-value="3">3</button>
+            <button type="button" class="operator" data-value="+">+</button>
+            <button type="button" class="scientific" data-action="cube">x³</button>
+
+            <button type="button" class="scientific" data-action="sin">sin</button>
+            <button type="button" class="scientific" data-action="cos">cos</button>
+            <button type="button" class="scientific" data-action="tan">tan</button>
+            <button type="button" class="scientific" data-action="factorial">n!</button>
+            <button type="button" class="scientific" data-action="log10">log</button>
+
+            <button type="button" class="scientific" data-action="log2">log₂</button>
+            <button type="button" class="scientific" data-action="ln">ln</button>
+            <button type="button" data-value="0" class="zero">0</button>
+            <button type="button" data-value=".">.</button>
+            <button type="button" class="equals" data-action="calculate" aria-label="Equals">=</button>
         </div>
-        <div class="rectangle-box1">
-          <button  onclick="toDisplay('1')">1</button>
-            <button   onclick="toDisplay('2')">2</button>
-            <button  onclick="toDisplay('3')">3</button>
-            <button   onclick="toDisplay('4')">4</button>
-            <button   class="math" onclick="calculate()">=</button>
-            <button  onclick="toDisplay('5')">5</button>
-            <button   onclick="toDisplay('6')">6</button>
-            <button   onclick="toDisplay('7')">7</button>
-            <button   onclick="toDisplay('8')">8</button>
-            <button  class="math" onclick="clearDisplay()">C</button>
-            <button   onclick="toDisplay('9')">9</button>
-            <button onclick="toDisplay('0')">0</button>
-            <button class="math" onclick = "toDisplay('.')">.</button>
-            <button   class="math" onclick="log2()">log<sub>2</sub>x</button>
-        </div>
-       </div> 
-    </div>
+        <p class="keyboard-help">Enter = calculate <span>·</span> Esc = clear <span>·</span> Backspace = delete</p>
+    </main>
     <script src="calci.js"></script>
 </body>
 </html>
